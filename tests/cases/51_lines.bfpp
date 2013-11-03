@@ -1,0 +1,6 @@
+/ INPUT: ABC /
+&l &l &l !
+
+l
+  ,. *++++++++++. !
+/ OUTPUT: A\nB\nC\n /

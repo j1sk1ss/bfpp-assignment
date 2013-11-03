@@ -1,0 +1,7 @@
+/ Several forward label patches /
+^a
+a+^b
+b+^c
+c+.
+
+/ OUTPUT: \x03 /

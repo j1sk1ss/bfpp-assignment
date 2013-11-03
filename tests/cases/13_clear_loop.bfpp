@@ -1,0 +1,4 @@
+/ A decrement loop clears a nonzero cell /
+++++[-].+.
+
+/ OUTPUT: \x00\x01 /

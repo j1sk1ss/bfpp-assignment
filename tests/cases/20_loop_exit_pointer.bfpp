@@ -1,0 +1,4 @@
+/ A loop tests the cell at the current pointer /
++[>]+.
+
+/ OUTPUT: \x01 /

@@ -1,0 +1,4 @@
+/ A loop moves a value to another cell /
++++++[->+<]>. <.
+
+/ OUTPUT: \x05\x00 /

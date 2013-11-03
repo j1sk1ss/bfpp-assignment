@@ -1,0 +1,5 @@
+/ A call preserves the caller pointer /
+>+++&f.<.!
+f>>>++++!
+
+/ OUTPUT: \x03\x00 /

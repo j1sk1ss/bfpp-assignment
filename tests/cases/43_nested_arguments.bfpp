@@ -1,0 +1,7 @@
+/ Nested calls use immediate parent arguments and preserve root arguments /
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++0&f$.&h$.!
+f#0+0&g$!
+g#0+!
+h#0!
+
+/ OUTPUT: CA /

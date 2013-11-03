@@ -1,0 +1,9 @@
+/ Put 'A' into the current cell and export it as argument 0 /
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++0
+/ Call f, copy its return value back into the current cell, print it /
+&f$.
+!
+/ f(arg0) -> arg0 + 1 /
+f
+#0+
+!

@@ -1,0 +1,5 @@
+/ Input and output preserve zero and high bytes /
+/ INPUT: \x00\xff\x2f\\ /
+,.,.,.,.
+
+/ OUTPUT: \x00\xff\x2f\\ /
