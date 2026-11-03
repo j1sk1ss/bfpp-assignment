@@ -1,0 +1,4 @@
+/ Return at root stops the entire program /
++.!++.
+
+/ OUTPUT: \x01 /

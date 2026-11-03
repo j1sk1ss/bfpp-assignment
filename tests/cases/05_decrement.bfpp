@@ -1,0 +1,4 @@
+/ Subtraction wraps below zero /
+-.-.
+
+/ OUTPUT: \xff\xfe /

@@ -1,0 +1,5 @@
+/ A backward jump combined with a terminating loop /
++++
+a[.-^a]
+
+/ OUTPUT: \x03\x02\x01 /

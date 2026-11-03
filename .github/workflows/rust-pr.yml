@@ -1,0 +1,77 @@
+name: Rust PR
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rust-pr-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_TARGET_DIR: ${{ github.workspace }}/target
+  RUST_BACKTRACE: "1"
+
+jobs:
+  quality:
+    name: Rust / ${{ matrix.check }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - check: fmt
+            command: cargo +stable fmt --all --check
+          - check: check
+            command: cargo +stable check --locked --workspace --all-targets --all-features
+          - check: clippy
+            command: cargo +stable clippy --locked --workspace --all-targets --all-features -- -D warnings
+          - check: test
+            command: cargo +stable test --locked --workspace --all-features
+    steps:
+      - name: Check out submission
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Install Rust tools
+        run: rustup toolchain install stable --profile minimal --component rustfmt --component clippy
+
+      - name: Run ${{ matrix.check }}
+        run: ${{ matrix.command }}
+
+  integration:
+    name: Rust / CLI integration
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out submission
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Install Rust
+        run: rustup toolchain install stable --profile minimal
+
+      - name: Build Rust CLI
+        id: build
+        run: cargo +stable build --locked --release --bin bfpp
+
+      - name: Test the fixture runner
+        run: python3 -B -m unittest discover -s tests -p test_bfpp_runner.py
+
+      - name: Run BF++ integration fixtures
+        run: python3 -B tests/run_bfpp_tests.py -- "$CARGO_TARGET_DIR/release/bfpp"
+
+      - name: Test CLI arguments, streams and exit codes
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: python3 -B tests/test_cli.py "$CARGO_TARGET_DIR/release/bfpp"

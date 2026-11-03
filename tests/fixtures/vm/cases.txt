@@ -1,0 +1,6 @@
+vm/echo.code vm/input.bin vm/echo.bin 8 100 0 0 6
+vm/call.code io/empty.bin vm/call.bin 8 100 0 0 9
+vm/bounds.code io/empty.bin io/empty.bin 8 100 4 0 1
+vm/limit.code io/empty.bin io/empty.bin 8 3 7 0 3
+vm/recursive.code io/empty.bin io/empty.bin 2 100 5 0 2
+vm/invalid.code io/empty.bin io/empty.bin 8 100 7 0 1

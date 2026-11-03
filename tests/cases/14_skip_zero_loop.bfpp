@@ -1,0 +1,4 @@
+/ A zero cell skips the loop body /
+[+++.]++.
+
+/ OUTPUT: \x02 /

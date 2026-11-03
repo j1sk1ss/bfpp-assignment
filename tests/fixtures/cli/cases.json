@@ -1,0 +1,163 @@
+[
+  {
+    "name": "no file",
+    "args": [],
+    "status": 2,
+    "error": "Usage:",
+    "input": "io/empty.bin",
+    "output": "io/empty.bin"
+  },
+  {
+    "name": "unknown option",
+    "args": [
+      "--bad"
+    ],
+    "status": 2,
+    "error": "Usage:",
+    "input": "io/empty.bin",
+    "output": "io/empty.bin"
+  },
+  {
+    "name": "unknown dialect",
+    "args": [
+      "--dialect=bad",
+      "{fixtures}/cli/echo.bf"
+    ],
+    "status": 1,
+    "error": "unknown dialect: bad",
+    "input": "io/empty.bin",
+    "output": "io/empty.bin"
+  },
+  {
+    "name": "unknown tape",
+    "args": [
+      "--tape=bad",
+      "{fixtures}/cli/echo.bf"
+    ],
+    "status": 1,
+    "error": "unknown tape: bad",
+    "input": "io/empty.bin",
+    "output": "io/empty.bin"
+  },
+  {
+    "name": "missing file",
+    "args": [
+      "{fixtures}/cli/missing.bf"
+    ],
+    "status": 1,
+    "error": "cannot read",
+    "input": "io/empty.bin",
+    "output": "io/empty.bin"
+  },
+  {
+    "name": "syntax error",
+    "args": [
+      "{fixtures}/compiler/open.bf"
+    ],
+    "status": 1,
+    "error": "compile error [bf_err_syntax] at 4",
+    "input": "io/empty.bin",
+    "output": "io/empty.bin"
+  },
+  {
+    "name": "runtime error",
+    "args": [
+      "{fixtures}/cli/left.bf"
+    ],
+    "status": 1,
+    "error": "runtime error [bf_err_tape_bounds] at pc=0",
+    "input": "io/empty.bin",
+    "output": "io/empty.bin"
+  },
+  {
+    "name": "multiple files",
+    "args": [
+      "{fixtures}/cli/echo.bf",
+      "{fixtures}/cli/left.bf"
+    ],
+    "status": 2,
+    "error": "Usage:",
+    "input": "io/empty.bin",
+    "output": "io/empty.bin"
+  },
+  {
+    "name": "binary echo bf fixed",
+    "args": [
+      "--dialect=bf",
+      "--tape=fixed",
+      "{fixtures}/cli/echo.bf"
+    ],
+    "status": 0,
+    "error": "",
+    "input": "vm/input.bin",
+    "output": "vm/echo.bin"
+  },
+  {
+    "name": "binary echo bf grow",
+    "args": [
+      "--dialect=bf",
+      "--tape=grow",
+      "{fixtures}/cli/echo.bf"
+    ],
+    "status": 0,
+    "error": "",
+    "input": "vm/input.bin",
+    "output": "vm/echo.bin"
+  },
+  {
+    "name": "binary echo bfpp fixed",
+    "args": [
+      "--dialect=bfpp",
+      "--tape=fixed",
+      "{fixtures}/cli/echo.bf"
+    ],
+    "status": 0,
+    "error": "",
+    "input": "vm/input.bin",
+    "output": "vm/echo.bin"
+  },
+  {
+    "name": "binary echo bfpp grow",
+    "args": [
+      "--dialect=bfpp",
+      "--tape=grow",
+      "{fixtures}/cli/echo.bf"
+    ],
+    "status": 0,
+    "error": "",
+    "input": "vm/input.bin",
+    "output": "vm/echo.bin"
+  },
+  {
+    "name": "default bfpp",
+    "args": [
+      "{fixtures}/cli/reset.bfpp"
+    ],
+    "status": 0,
+    "error": "",
+    "input": "io/empty.bin",
+    "output": "cli/zero.bin"
+  },
+  {
+    "name": "classic ignores extensions",
+    "args": [
+      "--dialect=bf",
+      "{fixtures}/cli/reset.bfpp"
+    ],
+    "status": 0,
+    "error": "",
+    "input": "io/empty.bin",
+    "output": "cli/one.bin"
+  },
+  {
+    "name": "classic hello",
+    "args": [
+      "--dialect=bf",
+      "{fixtures}/cli/hello.bf"
+    ],
+    "status": 0,
+    "error": "",
+    "input": "io/empty.bin",
+    "output": "cli/hello.bin"
+  }
+]

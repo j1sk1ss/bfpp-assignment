@@ -1,0 +1,6 @@
+/ Whitespace between commands does not change execution /
++
+	+ 
+ .
+
+/ OUTPUT: \x02 /

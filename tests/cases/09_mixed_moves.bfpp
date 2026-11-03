@@ -1,0 +1,4 @@
+/ Mixed moves preserve the intended cell /
++++>+++++><><.>><<.<.
+
+/ OUTPUT: \x05\x05\x03 /

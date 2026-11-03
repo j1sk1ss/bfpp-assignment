@@ -1,0 +1,6 @@
+/ A function may be defined before the caller /
+^m
+f+!
+m&f$.
+
+/ OUTPUT: \x01 /
