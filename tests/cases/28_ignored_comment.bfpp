@@ -1,0 +1,5 @@
+/ Commands and invalid syntax inside a comment are ignored /
+/ [ ] ] ^? &? #? + - . , * ! $ abc 012 /
++.
+
+/ OUTPUT: \x01 /

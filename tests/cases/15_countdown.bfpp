@@ -1,0 +1,4 @@
+/ A loop repeats until its cell is zero /
++++[.-]
+
+/ OUTPUT: \x03\x02\x01 /

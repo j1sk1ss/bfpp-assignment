@@ -1,0 +1,5 @@
+/ An input loop echoes bytes until EOF becomes zero /
+/ INPUT: Hi\n /
+,[.,]
+
+/ OUTPUT: Hi\n /

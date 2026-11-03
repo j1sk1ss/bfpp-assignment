@@ -1,0 +1,5 @@
+/ Each function invocation starts with fresh cells /
+&f$.&f$.!
+f+!
+
+/ OUTPUT: \x01\x01 /

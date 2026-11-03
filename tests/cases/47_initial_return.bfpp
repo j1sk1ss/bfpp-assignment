@@ -1,0 +1,4 @@
+/ Before any call the last return value is zero /
++++$.
+
+/ OUTPUT: \x00 /

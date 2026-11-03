@@ -1,0 +1,11 @@
+compiler/runs.bf compiler/runs.code 0 0 0
+compiler/loops.bf compiler/loops.code 0 0 0
+compiler/extensions.bfpp compiler/extensions.code 1 0 0
+compiler/dialect.bfpp compiler/dialect_classic.code 0 0 0
+compiler/dialect.bfpp compiler/dialect_bfpp.code 1 0 0
+compiler/open.bf - 1 3 4
+compiler/close.bf - 0 3 0
+compiler/comment.bfpp - 1 3 5
+compiler/undefined.bfpp - 1 3 0
+compiler/argument.bfpp - 1 3 0
+compiler/label.bfpp - 1 3 0

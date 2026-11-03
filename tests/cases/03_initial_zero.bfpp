@@ -1,0 +1,4 @@
+/ The first cell starts at zero /
+.
+
+/ OUTPUT: \x00 /

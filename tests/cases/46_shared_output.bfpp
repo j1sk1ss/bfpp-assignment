@@ -1,0 +1,5 @@
+/ Output from a callee precedes resumed caller output /
+&f+.!
+f+.!
+
+/ OUTPUT: \x01\x01 /

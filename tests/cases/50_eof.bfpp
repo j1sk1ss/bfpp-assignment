@@ -1,0 +1,5 @@
+/ EOF replaces a nonzero current cell with zero /
+/ INPUT: Q /
+,.,.
+
+/ OUTPUT: Q\x00 /

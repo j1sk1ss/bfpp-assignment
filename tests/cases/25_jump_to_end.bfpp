@@ -1,0 +1,6 @@
+/ A label may point past the last instruction /
+^z
++.
+z
+
+/ OUTPUT:  /

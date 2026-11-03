@@ -1,0 +1,5 @@
+/ An argument not stored by the caller is zero /
+&f$.!
+f#7!
+
+/ OUTPUT: \x00 /

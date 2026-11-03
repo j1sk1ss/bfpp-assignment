@@ -1,0 +1,4 @@
+/ Skipping a loop also skips nested loops /
+[+[+.]]++.
+
+/ OUTPUT: \x02 /

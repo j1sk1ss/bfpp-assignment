@@ -1,0 +1,5 @@
+/ Return uses the callee current cell /
+&f$.!
+f+>++++!
+
+/ OUTPUT: \x04 /

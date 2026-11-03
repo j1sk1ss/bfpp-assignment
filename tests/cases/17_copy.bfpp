@@ -1,0 +1,4 @@
+/ A loop copies a value into two cells /
++++++[->+>+<<]>.>.<<.
+
+/ OUTPUT: \x05\x05\x00 /
