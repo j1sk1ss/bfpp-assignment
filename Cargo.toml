@@ -1,0 +1,13 @@
+[package]
+name = "bfpp"
+version = "0.1.0"
+edition = "2021"
+description = "A byte-oriented BF and BF++ interpreter"
+publish = false
+
+[lib]
+path = "rust/lib.rs"
+
+[[bin]]
+name = "bfpp"
+path = "rust/main.rs"
